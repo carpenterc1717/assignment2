@@ -1,1 +1,2 @@
 # Question 2
+# balance after n period = principal x (1 + interest rate)**n
