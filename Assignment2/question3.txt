@@ -1,1 +1,67 @@
 # Question 3
+
+def main():
+    score1 = 0.00
+    score2 = 0.00
+    score3 = 0.00
+    score4 = 0.00
+    score5 = 0.00
+    avg = 0.00
+
+    score1 = inputScore1()
+    score2 = inputScore2()
+    score3 = inputScore3()
+    score4 = inputScore4()
+    score5 = inputScore5()
+
+    calcAvg = calc_average(score1, score2, score3, score4, score5)
+    abcGrade = determine_grade(calcAvg)
+
+    print('score\t\t numeric grade   letter grade')
+    print('------------------------------------------------')
+    print('score 1:\t', score1, '\t\t', determine_grade(score1))
+    print('score 2:\t', score2, '\t\t', determine_grade(score2))
+    print('score 3:\t', score3, '\t\t', determine_grade(score3))
+    print('score 4:\t', score4, '\t\t', determine_grade(score4))
+    print('score 5:\t', score5, '\t\t', determine_grade(score5))
+    print('------------------------------------------------')
+    print('Average Score:  ',calcAvg, '                ', abcGrade)
+    
+def inputScore1():
+    score1 = float(input('Enter score 1: '))
+    return score1
+def inputScore2():
+    score2 = float(input('Enter score 2: '))
+    return score2
+def inputScore3():
+    score3 = float(input('Enter score 3: '))
+    return score3
+def inputScore4():
+    score4 = float(input('Enter score 4: '))
+    return score4
+def inputScore5():
+    score5 = float(input('Enter score 5: '))
+    return score5
+
+def calc_average(score1, score2, score3, score4, score5):
+    total = score1 + score2 + score3 + score4 + score5
+    avg = total / 5
+    return avg
+
+def determine_grade(calcAvg):
+    if calcAvg >= 90 and calcAvg <= 100:
+        grade = 'A'
+        return grade
+    elif calcAvg >= 80 and calcAvg <= 89:
+        grade = 'B'
+        return grade
+    elif calcAvg >= 70 and calcAvg <= 79:
+        grade = 'C'
+        return grade
+    elif calcAvg >= 60 and calcAvg <= 69:
+        grade = 'D'
+        return grade
+    elif calcAvg < 60:
+        grade = 'F'
+        return grade
+main()
