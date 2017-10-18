@@ -1,2 +1,13 @@
-# Question 2
-# balance after n period = principal x (1 + interest rate)**n
+####Question 2 Code:
+# financial equation:  balance after n period = principal x (1 + i)**n
+# i = 4% 
+# n for earl = 48 
+# n for larry = 33 
+# defining variables for financial equation 
+i = float(0.04)
+p = float(5000)
+EB = ((p * (1-(1+i)** 15)/-i) * ((1 + i) **33))
+LB = ((p * (1-(1+i)** 33)/-i))
+
+print(EB)
+print(LB)
