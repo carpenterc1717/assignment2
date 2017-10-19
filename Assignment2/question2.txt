@@ -11,3 +11,37 @@ LB = ((p * (1-(1+i)** 33)/-i))
 
 print(EB)
 print(LB)
+
+
+
+
+
+
+
+INTREST_RATE= float(.04)
+                   
+
+def main():
+    principalE= float(5000)
+    numberOfYearsE = 33
+    (balE,intEarnedE)= balanceAndIntrestE(principalE,numberOfYearsE)
+    print("Balance:{0:.2f}    Intrest Earned: {1:.2f}".
+        format(balE,intEarnedE))
+
+    principal= float(5000)
+    numberOfYears = 33
+    (bal,intEarned)= balanceAndIntrest(principal,numberOfYears)
+    print("Balance:{0:.2f}    Intrest Earned: {1:.2f}".
+       format(bal,intEarned))
+
+def balanceAndIntrestE(prinE,numYearsE):
+    balanceE=(prinE* (1-(1+ INTREST_RATE)**15)/-INTREST_RATE)*((1+INTREST_RATE)**numYearsE)
+    intrestEarnedE = balanceE- prinE
+    return (balanceE,intrestEarnedE)
+
+def balanceAndIntrest(prin,numYears):
+    balance=(prin* (1-(1+ INTREST_RATE)**numYears)/-INTREST_RATE)
+    intrestEarned = balance- prin
+    return (balance,intrestEarned)
+
+main()
