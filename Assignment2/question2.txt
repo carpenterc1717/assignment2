@@ -24,24 +24,25 @@ INTREST_RATE= float(.04)
 def main():
     principalE= float(5000)
     numberOfYearsE = 33
-    (balE,intEarnedE)= balanceAndIntrestE(principalE,numberOfYearsE)
-    print("Balance:{0:.2f}    Intrest Earned: {1:.2f}".
-        format(balE,intEarnedE))
+    (balE,amountdepE)= balanceAndamountdepE(principalE,numberOfYearsE)
+    print("Balance:{0:.2f}    Amount Deposited: {1:.2f}".
+        format(balE,amountdepE))
 
     principal= float(5000)
     numberOfYears = 33
-    (bal,intEarned)= balanceAndIntrest(principal,numberOfYears)
+    (bal,amountdep)= balanceAndamoutndep(principal,numberOfYears)
     print("Balance:{0:.2f}    Intrest Earned: {1:.2f}".
-       format(bal,intEarned))
+       format(bal,amountdep))
 
-def balanceAndIntrestE(prinE,numYearsE):
+def balanceAndamountdepE(prinE,numYearsE):
     balanceE=(prinE* (1-(1+ INTREST_RATE)**15)/-INTREST_RATE)*((1+INTREST_RATE)**numYearsE)
-    intrestEarnedE = balanceE- prinE
-    return (balanceE,intrestEarnedE)
+    amountDepE= 5000*15
+    return (balanceE,amountDepE)
 
-def balanceAndIntrest(prin,numYears):
+def balanceAndamoutndep(prin,numYears):
     balance=(prin* (1-(1+ INTREST_RATE)**numYears)/-INTREST_RATE)
-    intrestEarned = balance- prin
-    return (balance,intrestEarned)
+    amountDep = 5000*33
+    return (balance,amountDep)
 
 main()
+
