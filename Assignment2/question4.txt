@@ -1,1 +1,8 @@
 # Question 4
+
+def main():
+    
+    inFile = open("Question4.txt", 'r')
+    text_read = [line.rstrip() for line in inFile]
+    return text_read
+#kennedy i started it and im trying to figure out the rest
