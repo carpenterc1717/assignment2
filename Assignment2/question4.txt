@@ -1,3 +1,4 @@
+
 # Question 4
 
 def main():
@@ -6,3 +7,32 @@ def main():
     text_read = [line.rstrip() for line in inFile]
     return text_read
 #kennedy i started it and im trying to figure out the rest
+def main():
+    ## Display the names of the first three presidents.
+    file = "Q4-Data (2).txt"
+
+    displayWithForLoop(file)
+   
+    displayWithListComprehension(file)
+    
+   
+    
+def displayWithForLoop(file):
+   infile = open(file, 'r')
+   for line in infile:
+        line=line.split( )
+        print([line[0],line[1]])   
+   infile.close()
+   
+def displayWithListComprehension(file):
+    infile = open(file, 'r')
+    listPres = [line.rstrip() for line in infile] 
+    infile.close()
+    print(listPres)
+   
+main()      
+
+
+
+
+ 
