@@ -33,6 +33,46 @@ def displayWithListComprehension(file):
 main()      
 
 
+----------------------------------
 
+def main():
+    firstList = text_read()
+    print(firstList)
+    print("Sorted List: ")
+    print('==============================================================')
+    print(list_sorted(firstList))
+    print("Two Dimensional List: ")
+    print('==============================================================')
+    sortList = (list_sorted(firstList))
+    print(new_list_create(firstList))
+    sepList = list_seperate(new_list_create(sortList))
+    print("List of Names: ")
+    print('==============================================================')
+    print(sepList[0])
+    print("List of Department Codes: ")
+    print('==============================================================')
+    print(sepList[1])
+    print("List of Employee Salaries: ")
+    print('=============================================================')
+    print(sepList[2])
+    
+def text_read():
+    theFile = open("Question4.txt", 'r')
+    file = [line.strip() for line in theFile]
+    print("Original List: ")
+    print('==============================================================')
+    return file
+def list_sorted(mainList):
+    mainList.sort(key = lambda empSal: empSal.split() [-1])
+    return mainList
+def new_list_create(mainList):
+    twoDimension = [i.split() for i in mainList]
+    return twoDimension
+def list_seperate(mainList):
+    empName = [(i[0] + " " + i[1]) for i in mainList]
+    deptCodes = [i[2] for i in mainList]
+    empSalaries = [i[3] for i in mainList]
+    return (empName, deptCodes, empSalaries)
+main()
 
  
